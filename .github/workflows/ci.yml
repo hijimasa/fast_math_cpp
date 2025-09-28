@@ -59,14 +59,17 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake build-essential libgtest-dev lcov gcc-11
+        sudo apt-get install -y cmake build-essential libgtest-dev lcov gcc-11 g++-11
+
+    - name: Setup compiler environment
+      run: |
+        echo "CC=gcc-11" >> $GITHUB_ENV
+        echo "CXX=g++-11" >> $GITHUB_ENV
 
     - name: Configure CMake with coverage
       run: |
         mkdir build
         cd build
-        export CC=gcc-11
-        export CXX=g++-11
         cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON -DCMAKE_CXX_FLAGS="--coverage -g -O0"
 
     - name: Build
