@@ -1,6 +1,12 @@
 # FastMath C++ Library
 English | [日本語](./README_jp.md)
 
+[![CI](https://github.com/hijimasa/fast_math_cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/hijimasa/fast_math_cpp/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/hijimasa/fast_math_cpp/branch/main/graph/badge.svg)](https://codecov.io/gh/hijimasa/fast_math_cpp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![C++17](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](https://isocpp.org/std/the-standard)
+[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey.svg)](https://github.com/hijimasa/fast_math_cpp)
+
 A high-performance mathematical library providing faster alternatives to standard C++ math functions with maintained precision.
 
 ## Overview
