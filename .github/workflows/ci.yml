@@ -85,9 +85,9 @@ jobs:
     - name: Generate coverage report
       run: |
         cd build
-        lcov --gcov-tool gcov-11 --capture --directory . --output-file coverage.info
-        lcov --gcov-tool gcov-11 --remove coverage.info '/usr/*' --output-file coverage.info
-        lcov --gcov-tool gcov-11 --remove coverage.info '*/test/*' --output-file coverage.info
+        lcov --gcov-tool gcov-11 --capture --directory . --output-file coverage.info --ignore-errors mismatch,source
+        lcov --gcov-tool gcov-11 --remove coverage.info '/usr/*' --output-file coverage.info --ignore-errors mismatch
+        lcov --gcov-tool gcov-11 --remove coverage.info '*/test/*' --output-file coverage.info --ignore-errors mismatch
         lcov --gcov-tool gcov-11 --list coverage.info
 
     - name: Upload coverage to Codecov
