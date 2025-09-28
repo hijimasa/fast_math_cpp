@@ -59,12 +59,14 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake build-essential libgtest-dev gcov lcov
+        sudo apt-get install -y cmake build-essential libgtest-dev lcov gcc-11
 
     - name: Configure CMake with coverage
       run: |
         mkdir build
         cd build
+        export CC=gcc-11
+        export CXX=g++-11
         cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTS=ON -DCMAKE_CXX_FLAGS="--coverage -g -O0"
 
     - name: Build
@@ -80,10 +82,10 @@ jobs:
     - name: Generate coverage report
       run: |
         cd build
-        lcov --capture --directory . --output-file coverage.info
-        lcov --remove coverage.info '/usr/*' --output-file coverage.info
-        lcov --remove coverage.info '*/test/*' --output-file coverage.info
-        lcov --list coverage.info
+        lcov --gcov-tool gcov-11 --capture --directory . --output-file coverage.info
+        lcov --gcov-tool gcov-11 --remove coverage.info '/usr/*' --output-file coverage.info
+        lcov --gcov-tool gcov-11 --remove coverage.info '*/test/*' --output-file coverage.info
+        lcov --gcov-tool gcov-11 --list coverage.info
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
@@ -115,10 +117,11 @@ jobs:
     - name: Run performance tests
       run: |
         cd build
-        ./fast_math_test --gtest_filter="*PerformanceTest*"
+        ./fast_math_test --gtest_filter="*PerformanceTest*" | tee performance_results.txt
 
     - name: Archive performance results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: performance-results
         path: build/performance_results.txt
+      if: always()
