@@ -2,10 +2,10 @@
 [English](./README.md) | 日本語
 
 [![CI](https://github.com/hijimasa/fast_math_cpp/actions/workflows/ci.yml/badge.svg)](https://github.com/hijimasa/fast_math_cpp/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/hijimasa/fast_math_cpp/branch/main/graph/badge.svg)](https://codecov.io/gh/hijimasa/fast_math_cpp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![C++17](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](https://isocpp.org/std/the-standard)
 [![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-lightgrey.svg)](https://github.com/hijimasa/fast_math_cpp)
+[![Performance](https://img.shields.io/badge/performance-optimized-brightgreen.svg)](https://github.com/hijimasa/fast_math_cpp)
 
 精度を維持しながら標準C++数学関数より高速な代替手段を提供する高性能数学ライブラリです。
 
