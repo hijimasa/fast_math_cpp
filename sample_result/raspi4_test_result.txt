@@ -1,0 +1,384 @@
+=================================================
+       Fast Math Library Test Suite
+=================================================
+[==========] Running 31 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 31 tests from FastMathTest
+[ RUN      ] FastMathTest.SinPrecisionTest
+
+=== Sin Function Precision Test ===
+Testing 10000 samples in range [-2�, 2�]
+Max absolute error: 0.00109035
+Max relative error: 1.00000000
+Avg absolute error: 0.00050518
+Avg relative error: 0.00206796
+[       OK ] FastMathTest.SinPrecisionTest (0 ms)
+[ RUN      ] FastMathTest.CosPrecisionTest
+
+=== Cos Function Precision Test ===
+Testing 10000 samples in range [-2�, 2�]
+Max absolute error: 0.00109071
+Max relative error: 23.39918527
+Avg absolute error: 0.00050518
+Avg relative error: 0.00434898
+[       OK ] FastMathTest.CosPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.SqrtPrecisionTest
+
+=== Sqrt Function Precision Test ===
+Testing 10000 samples in range [0.00100000, 1000.00000000]
+Max absolute error: 0.00001144
+Max relative error: 0.00000051
+Avg absolute error: 0.00000098
+Avg relative error: 0.00000005
+[       OK ] FastMathTest.SqrtPrecisionTest (0 ms)
+[ RUN      ] FastMathTest.TanPrecisionTest
+
+=== Tan Function Precision Test ===
+Testing 10000 samples in range [-π/2+0.1, π/2-0.1]
+Max absolute error: 0.08890629
+Max relative error: 0.01323941
+Avg absolute error: 0.00576680
+Avg relative error: 0.00296442
+[       OK ] FastMathTest.TanPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.AsinPrecisionTest
+
+=== Asin Function Precision Test ===
+Testing 10000 samples in range [-0.99, 0.99]
+Max absolute error: 0.05433047
+Max relative error: 1.00000000
+Avg absolute error: 0.00207640
+Avg relative error: 0.00409687
+[       OK ] FastMathTest.AsinPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.ExpPrecisionTest
+
+=== Exp Function Precision Test ===
+Testing 10000 samples in range [-10, 10]
+Max absolute error: 0.04101562
+Max relative error: 0.00000354
+Avg absolute error: 0.00049500
+Avg relative error: 0.00000042
+[       OK ] FastMathTest.ExpPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.LogPrecisionTest
+
+=== Log Function Precision Test ===
+Testing 10000 samples in range [0.01, 100]
+Max absolute error: 0.00000143
+Max relative error: 0.01178794
+Avg absolute error: 0.00000009
+Avg relative error: 0.00000123
+[       OK ] FastMathTest.LogPrecisionTest (0 ms)
+[ RUN      ] FastMathTest.PowPrecisionTest
+
+=== Pow Function Precision Test ===
+Testing 5000 samples with various base/exponent combinations
+Max absolute error: 0.00170898
+Max relative error: 0.00000418
+Avg absolute error: 0.00001721
+Avg relative error: 0.00000045
+[       OK ] FastMathTest.PowPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.FmodPrecisionTest
+
+=== Fmod Function Precision Test ===
+Testing 5000 samples with various dividend/divisor combinations
+Max absolute error: 0.00000000
+Avg absolute error: 0.00000000
+[       OK ] FastMathTest.FmodPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.RoundingFunctionsPrecisionTest
+
+=== Rounding Functions Precision Test ===
+Testing 10000 samples in range [-100, 100]
+Ceil errors: 0 / 10000
+Floor errors: 0 / 10000
+Round errors: 0 / 10000
+[       OK ] FastMathTest.RoundingFunctionsPrecisionTest (0 ms)
+[ RUN      ] FastMathTest.SinhPrecisionTest
+
+=== Sinh Function Precision Test ===
+Testing 10000 samples in range [-5, 5]
+Max absolute error: 0.00015640
+Max relative error: 0.00000414
+Avg absolute error: 0.00000556
+Avg relative error: 0.00000037
+[       OK ] FastMathTest.SinhPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.CoshPrecisionTest
+
+=== Cosh Function Precision Test ===
+Testing 10000 samples in range [-5, 5]
+Max absolute error: 0.00015259
+Max relative error: 0.00000345
+Avg absolute error: 0.00000552
+Avg relative error: 0.00000033
+[       OK ] FastMathTest.CoshPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.TanhPrecisionTest
+
+=== Tanh Function Precision Test ===
+Testing 10000 samples in range [-5, 5]
+Max absolute error: 0.00003877
+Max relative error: 0.00008390
+Avg absolute error: 0.00000043
+Avg relative error: 0.00000098
+[       OK ] FastMathTest.TanhPrecisionTest (1 ms)
+[ RUN      ] FastMathTest.AsinhPrecisionTest
+
+=== Asinh Function Precision Test ===
+Testing 10000 samples in range [-10, 10]
+Max absolute error: 0.00005019
+Max relative error: 0.00010429
+Avg absolute error: 0.00000039
+Avg relative error: 0.00000066
+[       OK ] FastMathTest.AsinhPrecisionTest (2 ms)
+[ RUN      ] FastMathTest.SinPerformanceTest
+
+=== Sin Function Performance Test ===
+Testing 1000000 iterations
+FastMath::sin time: 9.36 ms
+std::sin time: 13.67 ms
+Speedup: 1.46x
+Performance analysis: FASTER than std library
+[       OK ] FastMathTest.SinPerformanceTest (31 ms)
+[ RUN      ] FastMathTest.CosPerformanceTest
+
+=== Cos Function Performance Test ===
+Testing 1000000 iterations
+FastMath::cos time: 11.95 ms
+std::cos time: 13.85 ms
+Speedup: 1.16x
+Performance analysis: FASTER than std library
+[       OK ] FastMathTest.CosPerformanceTest (33 ms)
+[ RUN      ] FastMathTest.SqrtPerformanceTest
+
+=== Sqrt Function Performance Test ===
+Testing 1000000 iterations
+FastMath::sqrt time: 9.99 ms
+std::sqrt time: 7.26 ms
+Speedup: 0.73x
+Performance analysis: SLOWER than std library
+[       OK ] FastMathTest.SqrtPerformanceTest (19 ms)
+[ RUN      ] FastMathTest.TanPerformanceTest
+
+=== Tan Function Performance Test ===
+Testing 1000000 iterations
+FastMath::tan time: 24.24 ms
+std::tan time: 36.63 ms
+Speedup: 1.51x
+Performance analysis: FASTER than std library
+[       OK ] FastMathTest.TanPerformanceTest (63 ms)
+[ RUN      ] FastMathTest.Atan2PerformanceTest
+
+=== Atan2 Function Performance Test ===
+Testing 1000000 iterations
+FastMath::atan2 time: 13.19 ms
+std::atan2 time: 58.30 ms
+Speedup: 4.42x
+Performance analysis: FASTER than std library
+[       OK ] FastMathTest.Atan2PerformanceTest (90 ms)
+[ RUN      ] FastMathTest.ExpPerformanceTest
+
+=== Exp Function Performance Test ===
+Testing 1000000 iterations
+FastMath::exp time: 24.63 ms
+std::exp time: 12.22 ms
+Speedup: 0.50x
+Performance analysis: SLOWER than std library
+[       OK ] FastMathTest.ExpPerformanceTest (39 ms)
+[ RUN      ] FastMathTest.LogPerformanceTest
+
+=== Log Function Performance Test ===
+Testing 1000000 iterations
+FastMath::log time: 16.27 ms
+std::log time: 13.16 ms
+Speedup: 0.81x
+Performance analysis: SLOWER than std library
+[       OK ] FastMathTest.LogPerformanceTest (31 ms)
+[ RUN      ] FastMathTest.PowPerformanceTest
+
+=== Pow Function Performance Test ===
+Testing 500000 iterations
+FastMath::pow time: 38.74 ms
+std::pow time: 14.46 ms
+Speedup: 0.37x
+Performance analysis: SLOWER than std library
+[       OK ] FastMathTest.PowPerformanceTest (58 ms)
+[ RUN      ] FastMathTest.OptimizedPowPerformanceTest
+
+=== Optimized Pow Function Performance Test ===
+Testing 500000 iterations
+FastMath::pow time: 38.85 ms
+std::pow time: 14.44 ms
+Speedup: 0.37x
+Performance analysis: SLOWER than std library
+[       OK ] FastMathTest.OptimizedPowPerformanceTest (58 ms)
+[ RUN      ] FastMathTest.FmodPerformanceTest
+
+=== Fmod Function Performance Test ===
+Testing 1000000 iterations
+FastMath::fmod time: 27.89 ms
+std::fmod time: 33.89 ms
+Speedup: 1.22x
+Performance analysis: FASTER than std library
+[       OK ] FastMathTest.FmodPerformanceTest (75 ms)
+[ RUN      ] FastMathTest.RoundingFunctionsPerformanceTest
+
+=== Rounding Functions Performance Test ===
+Testing 1000000 iterations
+FastMath::ceil time: 6.59 ms
+std::ceil time: 7.12 ms
+Ceil speedup: 1.08x
+Ceil performance: FASTER than std library
+[       OK ] FastMathTest.RoundingFunctionsPerformanceTest (16 ms)
+[ RUN      ] FastMathTest.SinhPerformanceTest
+
+=== Sinh Function Performance Test ===
+Testing 1000000 iterations
+FastMath::sinh time: 31.51 ms
+std::sinh time: 72.39 ms
+Speedup: 2.30x
+Performance analysis: FASTER than std library
+[       OK ] FastMathTest.SinhPerformanceTest (105 ms)
+[ RUN      ] FastMathTest.TanhPerformanceTest
+
+=== Tanh Function Performance Test ===
+Testing 1000000 iterations
+FastMath::tanh time: 31.70 ms
+std::tanh time: 63.05 ms
+Speedup: 1.99x
+Performance analysis: FASTER than std library
+[       OK ] FastMathTest.TanhPerformanceTest (96 ms)
+[ RUN      ] FastMathTest.AsinhPerformanceTest
+
+=== Asinh Function Performance Test ===
+Testing 1000000 iterations
+FastMath::asinh time: 47.25 ms
+std::asinh time: 36.60 ms
+Speedup: 0.77x
+Performance analysis: SLOWER than std library
+[       OK ] FastMathTest.AsinhPerformanceTest (86 ms)
+[ RUN      ] FastMathTest.AcoshPerformanceTest
+
+=== Acosh Function Performance Test ===
+Testing 1000000 iterations
+FastMath::acosh time: 42.76 ms
+std::acosh time: 34.47 ms
+Speedup: 0.81x
+Performance analysis: SLOWER than std library
+[       OK ] FastMathTest.AcoshPerformanceTest (79 ms)
+[ RUN      ] FastMathTest.AtanhPerformanceTest
+
+=== Atanh Function Performance Test ===
+Testing 1000000 iterations
+FastMath::atanh time: 17.18 ms
+std::atanh time: 47.97 ms
+Speedup: 2.79x
+Performance analysis: FASTER than std library
+[       OK ] FastMathTest.AtanhPerformanceTest (67 ms)
+[ RUN      ] FastMathTest.EdgeCaseTests
+
+=== Edge Case Tests ===
+Sin special values:
+  sin(0.00) - Fast: 0.00, Std: 0.00, Error: 0.00
+  sin(0.79) - Fast: 0.71, Std: 0.71, Error: 0.00
+  sin(1.57) - Fast: 1.00, Std: 1.00, Error: 0.00
+  sin(3.14) - Fast: 0.00, Std: -0.00, Error: 0.00
+  sin(4.71) - Fast: -1.00, Std: -1.00, Error: 0.00
+  sin(6.28) - Fast: 0.00, Std: 0.00, Error: 0.00
+Cos special values:
+  cos(0.00) - Fast: 1.00, Std: 1.00, Error: 0.00
+  cos(0.79) - Fast: 0.71, Std: 0.71, Error: 0.00
+  cos(1.57) - Fast: 0.00, Std: -0.00, Error: 0.00
+  cos(3.14) - Fast: -1.00, Std: -1.00, Error: 0.00
+  cos(4.71) - Fast: -0.00, Std: 0.00, Error: 0.00
+  cos(6.28) - Fast: 1.00, Std: 1.00, Error: 0.00
+Sqrt special values:
+  sqrt(0.25) - Fast: 0.50, Std: 0.50, Error: 0.00
+  sqrt(1.00) - Fast: 1.00, Std: 1.00, Error: 0.00
+  sqrt(4.00) - Fast: 2.00, Std: 2.00, Error: 0.00
+  sqrt(9.00) - Fast: 3.00, Std: 3.00, Error: 0.00
+  sqrt(16.00) - Fast: 4.00, Std: 4.00, Error: 0.00
+  sqrt(100.00) - Fast: 10.00, Std: 10.00, Error: 0.00
+Tan special values:
+  tan(0.00) - Fast: 0.00, Std: 0.00, Error: 0.00
+  tan(0.52) - Fast: 0.58, Std: 0.58, Error: 0.00
+  tan(0.79) - Fast: 1.00, Std: 1.00, Error: 0.00
+  tan(1.05) - Fast: 1.73, Std: 1.73, Error: 0.00
+Asin special values:
+  asin(-1.00) - Fast: -1.57, Std: -1.57, Error: 0.00
+  asin(-0.50) - Fast: -0.52, Std: -0.52, Error: 0.00
+  asin(0.00) - Fast: 0.00, Std: 0.00, Error: 0.00
+  asin(0.50) - Fast: 0.52, Std: 0.52, Error: 0.00
+  asin(1.00) - Fast: 1.57, Std: 1.57, Error: 0.00
+Acos special values:
+  acos(-1.00) - Fast: 3.14, Std: 3.14, Error: 0.00
+  acos(-0.50) - Fast: 2.09, Std: 2.09, Error: 0.00
+  acos(0.00) - Fast: 1.57, Std: 1.57, Error: 0.00
+  acos(0.50) - Fast: 1.05, Std: 1.05, Error: 0.00
+  acos(1.00) - Fast: -0.00, Std: 0.00, Error: 0.00
+Atan2 special values:
+  atan2(1.00, 1.00) - Fast: 0.79, Std: 0.79, Error: 0.00
+  atan2(1.00, 0.00) - Fast: 1.57, Std: 1.57, Error: 0.00
+  atan2(0.00, 1.00) - Fast: 0.00, Std: 0.00, Error: 0.00
+  atan2(-1.00, 1.00) - Fast: -0.79, Std: -0.79, Error: 0.00
+  atan2(1.00, -1.00) - Fast: 2.36, Std: 2.36, Error: 0.00
+Exp special values:
+  exp(-2.00) - Fast: 0.14, Std: 0.14, Error: 0.00
+  exp(-1.00) - Fast: 0.37, Std: 0.37, Error: 0.00
+  exp(0.00) - Fast: 1.00, Std: 1.00, Error: 0.00
+  exp(1.00) - Fast: 2.72, Std: 2.72, Error: 0.00
+  exp(2.00) - Fast: 7.39, Std: 7.39, Error: 0.00
+  exp(5.00) - Fast: 148.41, Std: 148.41, Error: 0.00
+Log special values:
+  log(0.10) - Fast: -2.30, Std: -2.30, Error: 0.00
+  log(0.50) - Fast: -0.69, Std: -0.69, Error: 0.00
+  log(1.00) - Fast: 0.00, Std: 0.00, Error: 0.00
+  log(2.00) - Fast: 0.69, Std: 0.69, Error: 0.00
+  log(10.00) - Fast: 2.30, Std: 2.30, Error: 0.00
+  log(100.00) - Fast: 4.61, Std: 4.61, Error: 0.00
+Pow special values:
+  pow(2.00, 0.00) - Fast: 1.00, Std: 1.00, Error: 0.00
+  pow(2.00, 1.00) - Fast: 2.00, Std: 2.00, Error: 0.00
+  pow(2.00, 2.00) - Fast: 4.00, Std: 4.00, Error: 0.00
+  pow(2.00, 3.00) - Fast: 8.00, Std: 8.00, Error: 0.00
+  pow(10.00, 0.50) - Fast: 3.16, Std: 3.16, Error: 0.00
+  pow(4.00, -0.50) - Fast: 0.50, Std: 0.50, Error: 0.00
+Fmod special values:
+  fmod(7.00, 3.00) - Fast: 1.00, Std: 1.00, Error: 0.00
+  fmod(-7.00, 3.00) - Fast: -1.00, Std: -1.00, Error: 0.00
+  fmod(7.00, -3.00) - Fast: 1.00, Std: 1.00, Error: 0.00
+  fmod(5.50, 2.50) - Fast: 0.50, Std: 0.50, Error: 0.00
+  fmod(10.00, 1.50) - Fast: 1.00, Std: 1.00, Error: 0.00
+Rounding functions special values:
+  -2.70 - Ceil: -2.00 (-2.00), Floor: -3.00 (-3.00), Round: -3.00 (-3.00)
+  -2.50 - Ceil: -2.00 (-2.00), Floor: -3.00 (-3.00), Round: -3.00 (-3.00)
+  -2.30 - Ceil: -2.00 (-2.00), Floor: -3.00 (-3.00), Round: -2.00 (-2.00)
+  -0.50 - Ceil: 0.00 (-0.00), Floor: -1.00 (-1.00), Round: -1.00 (-1.00)
+  0.00 - Ceil: 0.00 (0.00), Floor: 0.00 (0.00), Round: 0.00 (0.00)
+  0.50 - Ceil: 1.00 (1.00), Floor: 0.00 (0.00), Round: 1.00 (1.00)
+  2.30 - Ceil: 3.00 (3.00), Floor: 2.00 (2.00), Round: 2.00 (2.00)
+  2.50 - Ceil: 3.00 (3.00), Floor: 2.00 (2.00), Round: 3.00 (3.00)
+  2.70 - Ceil: 3.00 (3.00), Floor: 2.00 (2.00), Round: 3.00 (3.00)
+Hyperbolic functions special values:
+  -2.00 - Sinh: -3.63 (-3.63), Cosh: 3.76 (3.76), Tanh: -0.96 (-0.96)
+  -1.00 - Sinh: -1.18 (-1.18), Cosh: 1.54 (1.54), Tanh: -0.76 (-0.76)
+  -0.50 - Sinh: -0.52 (-0.52), Cosh: 1.13 (1.13), Tanh: -0.46 (-0.46)
+  0.00 - Sinh: 0.00 (0.00), Cosh: 1.00 (1.00), Tanh: 0.00 (0.00)
+  0.50 - Sinh: 0.52 (0.52), Cosh: 1.13 (1.13), Tanh: 0.46 (0.46)
+  1.00 - Sinh: 1.18 (1.18), Cosh: 1.54 (1.54), Tanh: 0.76 (0.76)
+  2.00 - Sinh: 3.63 (3.63), Cosh: 3.76 (3.76), Tanh: 0.96 (0.96)
+Inverse hyperbolic functions special values:
+  asinh(-2.00) - Fast: -1.44, Std: -1.44, Error: 0.00
+  asinh(-1.00) - Fast: -0.88, Std: -0.88, Error: 0.00
+  asinh(-0.50) - Fast: -0.48, Std: -0.48, Error: 0.00
+  atanh(-0.50) - Fast: -0.55, Std: -0.55, Error: 0.00
+  asinh(0.00) - Fast: 0.00, Std: 0.00, Error: 0.00
+  atanh(0.00) - Fast: 0.00, Std: 0.00, Error: 0.00
+  asinh(0.50) - Fast: 0.48, Std: 0.48, Error: 0.00
+  atanh(0.50) - Fast: 0.55, Std: 0.55, Error: 0.00
+  asinh(1.00) - Fast: 0.88, Std: 0.88, Error: 0.00
+  acosh(1.00) - Fast: 0.00, Std: 0.00, Error: 0.00
+  asinh(2.00) - Fast: 1.44, Std: 1.44, Error: 0.00
+  acosh(2.00) - Fast: 1.32, Std: 1.32, Error: 0.00
+[       OK ] FastMathTest.EdgeCaseTests (2 ms)
+[----------] 31 tests from FastMathTest (960 ms total)
+
+[----------] Global test environment tear-down
+[==========] 31 tests from 1 test suite ran. (960 ms total)
+[  PASSED  ] 31 tests.
